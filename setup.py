@@ -9,7 +9,7 @@ except ImportError:
 from configparser import ConfigParser
 from distutils.command.build_py import build_py
 
-from mocks.version import __version__
+from utils.version import __version__
 
 # Get some values from the setup.cfg
 conf = ConfigParser()
@@ -23,7 +23,7 @@ KEYWORDS = metadata.get('keywords', '')
 LICENSE = metadata.get('license', 'unknown')
 LONG_DESCRIPTION = metadata.get('long_description', '')
 PACKAGENAME = metadata.get('package_name', 'utils')
-# URL = metadata.get('url', 'https://www.facebook.com/AstroHuntsman/')
+URL = metadata.get('url', 'https://github.com/bazkiaei/AstroMQPyGit')
 
 # Treat everything in scripts except README.rst as a script to be installed
 # scripts = [fname for fname in glob.glob(os.path.join('scripts', '*'))
@@ -36,7 +36,7 @@ setup(name=PACKAGENAME,
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
-      # url=URL,
+      url=URL,
       packages=find_packages(exclude=['tests', 'test_*']),
       keywords=KEYWORDS,
       setup_requires=['pytest-runner'],
