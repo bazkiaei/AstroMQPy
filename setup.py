@@ -9,7 +9,7 @@ except ImportError:
 from configparser import ConfigParser
 from distutils.command.build_py import build_py
 
-from utils.version import __version__
+from mqutils.version import __version__
 
 # Get some values from the setup.cfg
 conf = ConfigParser()
