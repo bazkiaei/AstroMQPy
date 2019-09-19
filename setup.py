@@ -22,7 +22,7 @@ DESCRIPTION = metadata.get('description', '')
 KEYWORDS = metadata.get('keywords', '')
 LICENSE = metadata.get('license', 'unknown')
 LONG_DESCRIPTION = metadata.get('long_description', '')
-PACKAGENAME = metadata.get('package_name', 'utils')
+PACKAGENAME = metadata.get('package_name', 'mqutils')
 URL = metadata.get('url', 'https://github.com/bazkiaei/AstroMQPyGit')
 
 # Treat everything in scripts except README.rst as a script to be installed
