@@ -35,7 +35,3 @@ def pixel_distance(stars):
             distances[i][i + 1:] = dis
     logger.info('The End!')
     return distances
-
-
-def rand():
-    return None
