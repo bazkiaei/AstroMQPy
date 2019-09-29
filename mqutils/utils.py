@@ -24,6 +24,14 @@ def pixel_distance(stars):
     -------
     np.array
         Array which contains the distances between stars.
+
+    Notes
+    -----
+        Alternatively, you can use the following suggestion for calculating
+        the Eucliudean Distance between the pairs of coordinates. Link:
+        https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html
+        Scipy.spatial.distance.cdist has an advantage of having a variety of
+        distance metrics.
     """
     distances = np.zeros((stars.shape[0], stars.shape[0]))
     logger.info('Start')
@@ -35,8 +43,3 @@ def pixel_distance(stars):
             distances[i][i + 1:] = dis
     logger.info('The End!')
     return distances
-
-""" Alternatively, you can use the following suggestion for calculating the Eucliudean Distance between the pairs of coordinates. 
-Link: https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html
-Scipy.spatial.distance.cdist has an advantage of having a variety of distance metrics. """
-
