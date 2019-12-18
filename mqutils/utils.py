@@ -9,6 +9,39 @@ logbook.StreamHandler(sys.stdout).push_application()
 logger = logbook.Logger('logbook')
 
 
+def find_intensity_at_half_radius_sersic(n=1,
+                                         r_e=10,
+                                         l_total=5e10):
+    """
+    Computes the vale of intensity at half light radius for Sersic profile.
+    The total luminosity of the galaxy should be provided by the user.
+
+    Parameters
+    ----------
+    n : int, optional
+        Sersic index, currently only n=1 is acceptable.
+    r_e : int, optional
+        The half light radius of the Sersic profile.
+    l_total : float, optional
+        The total luminosity of the galaxy.
+
+    Returns
+    -------
+    numpy.float64
+        The intensity of the luminosity of the galaxy at half light radius.
+
+    Raises
+    ------
+    ValueError
+        This function accepts only n=1 currently and for other values raises
+        ValueError.
+    """
+    if n != 1:
+        raise ValueError('values other than n = 1 are not acceptable yet')
+    l_e = (1.678 ** 2) * l_total / (2 * (r_e ** 2) * (np.exp(1.678)) * np.pi)
+    return l_e
+
+
 def pixel_distance(stars):
     """
     This function measures the distance between to objects. First, it was
