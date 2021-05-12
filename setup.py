@@ -9,7 +9,7 @@ except ImportError:
 from configparser import ConfigParser
 from distutils.command.build_py import build_py
 
-from utils.version import __version__
+from mqutils.version import __version__
 
 # Get some values from the setup.cfg
 conf = ConfigParser()
@@ -22,7 +22,7 @@ DESCRIPTION = metadata.get('description', '')
 KEYWORDS = metadata.get('keywords', '')
 LICENSE = metadata.get('license', 'unknown')
 LONG_DESCRIPTION = metadata.get('long_description', '')
-PACKAGENAME = metadata.get('package_name', 'utils')
+PACKAGENAME = metadata.get('package_name', 'mqutils')
 URL = metadata.get('url', 'https://github.com/bazkiaei/AstroMQPyGit')
 
 # Treat everything in scripts except README.rst as a script to be installed
